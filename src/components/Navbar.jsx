@@ -62,7 +62,7 @@ export default function Navbar({  search, setSearch }) {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <input type="search" value={search} onChange={(e) => setSearch(e.target.value)} className="bg-slate-500 rounded-md py-1 px-3 text-white w-50 border-slate-500 mx-3 placeholder-white hidden sm:ml-6 sm:block" placeholder="search" />
+                <input type="search" value={search} onChange={(e) => setSearch(e.target.value)} className="bg-slate-500 rounded-md py-1 px-3 text-white w-50 border-slate-500 mx-3 placeholder-white hidden sm:ml-6 sm:block" placeholder="search by author" />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Navbar({  search, setSearch }) {
                 </DisclosureButton>
               ))}
               <div className='text-center'>
-                <input type="search" className="bg-slate-500 rounded-md py-1 px-3 text-white w-50 border-slate-500 mx-3 placeholder-white" placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
+                <input type="search" className="bg-slate-500 rounded-md py-1 px-3 text-white w-50 border-slate-500 mx-3 placeholder-white" placeholder="search by author" value={search} onChange={(e) => setSearch(e.target.value)} />
               </div>
             </div>
           </DisclosurePanel>

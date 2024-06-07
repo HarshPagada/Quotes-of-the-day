@@ -67,13 +67,12 @@ export default function Navbar({  search, setSearch }) {
             </div>
           </div>
 
-          <DisclosurePanel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
-                <DisclosureButton
+                <Link
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  to={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
@@ -81,14 +80,13 @@ export default function Navbar({  search, setSearch }) {
                   aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
-
-                </DisclosureButton>
+                </Link>
               ))}
               <div className='text-center'>
                 <input type="search" className="bg-slate-500 rounded-md py-1 px-3 text-white w-50 border-slate-500 mx-3 placeholder-white" placeholder="search by author" value={search} onChange={(e) => setSearch(e.target.value)} />
               </div>
             </div>
-          </DisclosurePanel>
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
